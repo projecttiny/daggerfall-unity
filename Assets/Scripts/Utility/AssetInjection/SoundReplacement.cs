@@ -48,6 +48,16 @@ namespace DaggerfallWorkshop.Utility.AssetInjection
         {
             return TryImportAudioClip(sound.ToString(), ".wav", false, out audioClip);
         }
+		/// <summary>
+        /// Seek sound from mods.
+        /// </summary>
+        /// <param name="sound">Sound clip to seek.</param>
+        /// <param name="audioClip">Audioclip with imported sound data.</param>
+        /// <returns>True if sound is found.</returns>
+        public static bool TryImportSound(string fileName, out AudioClip audioClip)
+        {
+            return TryImportAudioClip(fileName, ".wav", false, out audioClip);
+        }
 
         /// <summary>
         /// Seek song from mods.

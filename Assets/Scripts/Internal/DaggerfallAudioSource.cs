@@ -17,6 +17,7 @@ using System.IO;
 using DaggerfallConnect;
 using DaggerfallConnect.Utility;
 using DaggerfallConnect.Arena2;
+using DaggerfallWorkshop.Utility.AssetInjection;
 
 namespace DaggerfallWorkshop
 {
@@ -191,6 +192,19 @@ namespace DaggerfallWorkshop
             {
                 AudioClip clip = dfUnity.SoundReader.GetAudioClip(soundIndex);
                 if (clip)
+                {
+                    audioSource.spatialBlend = spatialBlend;
+                    audioSource.PlayOneShotWhenReady(clip, volumeScale);
+                }
+            }
+        }
+		
+        public void PlayOneShot(string fileName, float spatialBlend = 1, float volumeScale = 1f)
+        {
+            if (enabled && ReadyCheck())
+            {
+                AudioClip clip = null;
+                if (SoundReplacement.TryImportSound(fileName, out clip))
                 {
                     audioSource.spatialBlend = spatialBlend;
                     audioSource.PlayOneShotWhenReady(clip, volumeScale);
