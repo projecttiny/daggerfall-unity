@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DaggerfallConnect.Utility;
@@ -51,7 +51,9 @@ namespace DaggerfallWorkshop{
 
 		void Update () {
 			if(!cooldown && !saidGreetingOnIdle && motor.DistanceToPlayer <= 2.5f && mobileAsset.IsIdle){
-				dfAudioSource.PlayOneShot(ChooseGreetingSound(), 1, 1.1f);
+                string str = ChooseGreetingSound();
+                Debug.LogError(str);
+                dfAudioSource.PlayOneShot(str, 1, 1.1f);
 				saidGreetingOnIdle = true;
 				StartCoroutine(WaitGreeting());
 			}else if(motor.DistanceToPlayer > 2.5f || !mobileAsset.IsIdle){
