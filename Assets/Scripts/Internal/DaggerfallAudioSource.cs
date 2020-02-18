@@ -201,14 +201,11 @@ namespace DaggerfallWorkshop
 		
         public void PlayOneShot(string fileName, float spatialBlend = 1, float volumeScale = 1f)
         {
-            Debug.LogError("1");
             if (enabled && ReadyCheck())
             {
-                Debug.LogError("2");
                 AudioClip clip = null;
                 if (SoundReplacement.TryImportSound(fileName, out clip))
                 {
-                    Debug.LogError("3");
                     audioSource.spatialBlend = spatialBlend;
                     audioSource.PlayOneShotWhenReady(clip, volumeScale);
                 }
