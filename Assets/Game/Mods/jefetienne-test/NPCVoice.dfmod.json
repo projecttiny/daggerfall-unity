@@ -1,0 +1,18 @@
+{
+    "ModTitle": "NPCVoice",
+    "ModVersion": "0.1",
+    "ModAuthor": "jefetienne",
+    "ContactInfo": "forums.dfworkshop.net",
+    "DFUnity_Version": "0.10.18",
+    "ModDescription": "NPC will say something when idle and player near. British from https://freesound.org/people/Intimidated/sounds/61571/\r",
+    "GUID": "de332b01-60d7-480f-8f5d-277d1355ef3e",
+    "Files": [
+        "Assets/Game/Mods/jefetienne-test/greet_common_1_1.wav",
+        "Assets/Game/Mods/jefetienne-test/greet_common_1_2.wav",
+        "Assets/Game/Mods/jefetienne-test/greet_common_1_3.wav",
+        "Assets/Game/Mods/jefetienne-test/greet_common_1_4.wav",
+        "Assets/Game/Mods/jefetienne-test/greet_common_1_5.wav"
+    ],
+    "Contributes": null,
+    "Dependencies": null
+}
